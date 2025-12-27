@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script src="bundle.js" type="module"></script>
+</head>
+<body>
+  <p>Steps to replicate. Make sure to have a console open</p>
+  <p>Expected behavior</p>
+  <ol>
+    <li>Focus on the title in the non-remote form</li>
+    <li>Press the <kbd>Enter</kbd> key multiple times</li>
+    <li>Observe that console messages for the button <code>click</code> event are dispatched</li>
+  </ol>
+
+  <p>Failing behavior</p>
+  <ol>
+    <li>Focus on the title in the remote form</li>
+    <li>Press the <kbd>Enter</kbd> key</li>
+    <li>Observe a console messages for the button <code>click</code> event is dispatched</li>
+    <li>Observe that hte button is disabled the form cannot be submitted</li>
+  </ol>
+
+
+  <section>
+    <h1>Remote Form</h1>
+    <form data-remote=true>
+      <section>
+        <label>Title
+          <input type="text" name="title" required>
+        </label>
+      </section>
+
+      <section>
+        <label>Date
+          <input type="date" name="date" required>
+        </label>
+      </section>
+
+      <section>
+        <button type="submit" data-disable="true">Submit</button>
+      </section>
+    </form>
+  </section>
+
+  <section>
+    <h1>Non-remote Form</h1>
+    <form>
+      <section>
+        <label>Title
+          <input type="text" name="title" required>
+        </label>
+      </section>
+
+      <section>
+        <label>Date
+          <input type="date" name="date" required>
+        </label>
+      </section>
+
+      <section>
+        <button type="submit">Submit</button>
+      </section>
+    </form>
+  </section>
+
+  <style>
+    section {
+      padding-block-start: 1em;
+    }
+  </style>
+</body>
+</html>
