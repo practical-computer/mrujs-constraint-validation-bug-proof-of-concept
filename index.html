@@ -46,6 +46,27 @@
   </section>
 
   <section>
+    <h1>Remote Form (input type `submit`)</h1>
+    <form data-remote=true>
+      <section>
+        <label>Title
+          <input type="text" name="title" required>
+        </label>
+      </section>
+
+      <section>
+        <label>Date
+          <input type="date" name="date" required>
+        </label>
+      </section>
+
+      <section>
+        <input type="submit" data-disable="true" value="Input Submit">
+      </section>
+    </form>
+  </section>
+
+  <section>
     <h1>Non-remote Form</h1>
     <form>
       <section>

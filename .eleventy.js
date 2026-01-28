@@ -11,7 +11,7 @@ export default function(eleventyConfig) {
       entryPoints: ["index.js"],
       bundle: true,
       outfile: "_site/bundle.js",
-      sourcemap: true,
+      sourcemap: false,
     })
   })
 };

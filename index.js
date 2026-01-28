@@ -12,5 +12,5 @@ function formSubmit(event) {
   console.debug(["🥰", event])
 }
 
-document.querySelectorAll(`button`).forEach(x => x.addEventListener(`click`, clickHandler))
-// document.querySelector(`form`).addEventListener(`submit`, formSubmit)
+document.querySelectorAll(`button,input[type=submit]`).forEach(x => x.addEventListener(`click`, clickHandler))
+document.querySelectorAll(`form`).forEach(x => x.addEventListener(`submit`, formSubmit))
